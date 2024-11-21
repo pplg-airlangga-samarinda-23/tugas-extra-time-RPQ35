@@ -63,7 +63,7 @@
         </div>
         <div id="login">
             <div class="konten-atas"></div>
-            <form method="POST" action="">
+            <form method="POST" action="dashbor.php">
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="admin1234" required>
                 <label for="password">Password:</label>
