@@ -2,9 +2,12 @@
 <html lang="eng" id="dashborone">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=e, initial-scale=1.0">
+    <meta name="viewport" content="width=display-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <?php  
+    include('manggil.php');$SQL="SELECT*FROM isi_data ORDER BY id DESC";$hasil=$conn->query($SQL);
+    ?>
 </head>
 <body>
     <header>
@@ -33,13 +36,16 @@
                     status
                 </th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+           <?php
+           while($baris=$hasil->fetch_row()){
+           $inilah[]=$baris;
+           }
+           $inilah = array_reverse($inilah);
+
+           foreach($inilah as $baris){
+            echo '<tr><th>'.$baris[0].'</th><th>'.$baris[1].'</th><th>'.$baris[2].'</th><th>'.$baris[3].'</th><th>'.$baris[4].'</th></tr>';
+           }
+           ?>
         </table>
     </div>
     <div class="botton-dash">
