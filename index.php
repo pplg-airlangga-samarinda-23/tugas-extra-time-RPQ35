@@ -19,12 +19,12 @@
         </div>
         <div id="login">
             <div class="konten-atas"></div>
-            <form method="POST" >
+            <form  method="POST">
                 <label for="username">Username:</label>
                 <input type="text" name="username" placeholder="admin1234" required>
                 <label for="password">Password:</label>
                 <input type="password" name="pass" placeholder="12345" required>
-                <button accesskey="submit" type="submit">Submit</button>
+                <button accesskey="submit" name="submit" type="submit">Submit</button>
             </form>
             <a href="">Lupa password</a>
         </div>
